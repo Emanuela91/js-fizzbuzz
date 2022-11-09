@@ -10,6 +10,11 @@ const contenitore = document.querySelector(".container");
 //     // poi creo all'interno del div i singoli box con i numeri
 //     const element = `<div class="box box-${i}">${i}</div>`;
 //     contenitore.innerHTML += element;
+
+// Se il numero è un multiplo di 3 stampo e di 5 stampo "FizzBuzz" e stampo in console
+//      if (i % 3 === 0 && i % 5 === 0){
+//         console.log("FizzBuzz",i);
+//     }
     
 //     // Se il numero è un multiplo di 3 stampo "Fizz" e stampo in console 
 //     if (i % 3 === 0){
@@ -20,39 +25,40 @@ const contenitore = document.querySelector(".container");
 //      if (i % 5 === 0){
 //         console.log("buzz",i);
 //     }
-
-//      // Se il numero è un multiplo di 3 stampo e di 5 stampo "FizzBuzz" e stampo in console
-//      if (i % 3 === 0 && i % 5 === 0){
-//         console.log("FizzBuzz",i);
-//     }
 // }
 
+
+// Altra versione
+// Numeri da 1 a 100
 for (let i = 1; i <= 100; i++){
     const element = document.createElement('div');
     element.classList.add("box");
     contenitore.append(element);
     
+    // Se il numero è un multiplo di 3 stampo e di 5 stampo "FizzBuzz"
     if (i % 3 === 0 && i % 5 === 0){
         let fizzBuzz = "fizzBuzz";
         element.append(fizzBuzz);
         element.classList.add(fizzBuzz);
     }
     
+    // Se il numero è un multiplo di 3 stampo "Fizz"
     else if (i % 3 === 0){
         let fizz = "fizz";
         element.append(fizz);
         element.classList.add(fizz);  
     }
     
+    // Se il numero è un multiplo di 5 stampo "Buzz"
     else if (i % 5 === 0){
         let buzz = "buzz";
         element.append(buzz);
         element.classList.add(buzz);  
     }
     
+    // Altrimenti scrivo solo il numero
     else{
         element.append(i);
-
     }
 }
 
