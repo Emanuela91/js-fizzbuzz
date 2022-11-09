@@ -6,6 +6,7 @@ const contenitore = document.querySelector(".container");
 
 // A livello Console stampo numeri da 1 a 100
 for (let i = 1; i <= 100; i++){
+    console.log(i);
     // poi creo all'interno del div i singoli box con i numeri
     const element = `<div class="box box-${i}">${i}</div>`;
     contenitore.innerHTML += element;
@@ -15,17 +16,14 @@ for (let i = 1; i <= 100; i++){
         console.log("fizz",i);
     }
     
-    // Se il numero è un multiplo di 5 stampo "Buzz" e stampo in console
-    else if (i % 5 === 0){
+     // Se il numero è un multiplo di 5 stampo "Buzz" e stampo in console
+     if (i % 5 === 0){
         console.log("buzz",i);
     }
-    
-    // Se il numero è un multiplo di 3 stampo e di 5 stampo "FizzBuzz" e stampo in console
-    else if (i % 3 === 0 && i % 5 === 0){
+
+     // Se il numero è un multiplo di 3 stampo e di 5 stampo "FizzBuzz" e stampo in console
+     if (i % 3 === 0 && i % 5 === 0){
         console.log("FizzBuzz",i);
-    }
-    else {
-        console.log(i);
     }
 }
 
