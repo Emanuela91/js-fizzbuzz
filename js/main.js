@@ -10,6 +10,11 @@ for (let i = 1; i <= 100; i++){
     const element = `<div class="box box-${i}">${i}</div>`;
     contenitore.innerHTML += element;
     
+    // Se il numero è un multiplo di 3 stampo e di 5 stampo "FizzBuzz" e stampo in console
+    else if (i % 3 === 0 && i % 5 === 0){
+        console.log("FizzBuzz",i);
+    }
+    
     // Se il numero è un multiplo di 3 stampo "Fizz" e stampo in console 
     if (i % 3 === 0){
         console.log("fizz",i);
@@ -20,10 +25,6 @@ for (let i = 1; i <= 100; i++){
         console.log("buzz",i);
     }
     
-    // Se il numero è un multiplo di 3 stampo e di 5 stampo "FizzBuzz" e stampo in console
-    else if (i % 3 === 0 && i % 5 === 0){
-        console.log("FizzBuzz",i);
-    }
     else {
         console.log(i);
     }
